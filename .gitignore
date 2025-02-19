@@ -1,0 +1,33 @@
+# Ignore system and IDE files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Ignore Helm charts & generated files
+charts/
+Chart.lock
+*.tgz
+values.schema.json
+values.generated.yaml
+default-values.yaml
+
+# Ignore default ArgoCD templates (unless modified)
+argo-cd/templates/*
+!argo-cd/templates/custom-*  # Keep only custom templates
+
+# Ignore Kubernetes objects we don’t customize
+argo-cd/templates/crds/
+argo-cd/templates/argocd-configs/
+argo-cd/templates/argocd-notifications/
+argo-cd/templates/argocd-repo-server/
+argo-cd/templates/argocd-server/aws/
+argo-cd/templates/argocd-server/gke/
+argo-cd/templates/argocd-server/openshift/
+argo-cd/templates/redis/
+argo-cd/templates/dex/
+
+# Ignore Helm test & example files
+templates/tests/
+argo-cd/templates/tests/
+argo-cd/charts/redis-ha/templates/tests/
