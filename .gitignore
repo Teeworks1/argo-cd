@@ -31,3 +31,5 @@ argo-cd/templates/dex/
 templates/tests/
 argo-cd/templates/tests/
 argo-cd/charts/redis-ha/templates/tests/
+
+charts/templates/*.yaml
